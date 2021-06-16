@@ -16,7 +16,7 @@ exports.generateRobotText = function () {
     flags: "a", // 'a' means appending (old data will be preserved)
   });
 
-  robotstxt.write("User-agent:" + policies.policy.userAgent + "\n");
+  robotstxt.write("User-agent: " + policies.policy.userAgent + "\n");
 
   disAllow.forEach((item, index) => {
     robotstxt.write("Disallow:" + item + "\n");
