@@ -32,6 +32,18 @@ Step 2: Add configurations as per your preference.
   };
 ```
 
+Example 02
+
+```diff
+  module.exports = {
+    policy: {
+      userAgent: "*",
+      disallow: [""],
+      allow: [],
+    },
+  };
+```
+
 Step 3: Import `generateRobotText` from the package in `index.js`
 
 ```diff
