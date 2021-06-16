@@ -19,11 +19,11 @@ exports.generateRobotText = function () {
   robotstxt.write("User-agent: " + policies.policy.userAgent + "\n");
 
   disAllow.forEach((item, index) => {
-    robotstxt.write("Disallow:" + item + "\n");
+    robotstxt.write("Disallow: " + item + "\n");
   });
 
   allow.forEach((item, index) => {
-    robotstxt.write("Allow:" + item + "\n");
+    robotstxt.write("Allow: " + item + "\n");
   });
 
   robotstxt.end();
