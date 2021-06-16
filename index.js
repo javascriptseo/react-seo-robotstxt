@@ -5,7 +5,14 @@ exports.generateRobotText = function () {
   var allow = policies.policy.allow;
   var disAllow = policies.policy.disallow;
 
-  var robotstxt = fs.createWriteStream("robots.txt", {
+  const path = "./public/robots.txt";
+
+  if (fs.existsSync(path)) {
+    fs.unlinkSync(path);
+  }
+
+  // use public folder for react
+  var robotstxt = fs.createWriteStream(path, {
     flags: "a", // 'a' means appending (old data will be preserved)
   });
 
